@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0070f3" />
+    <meta name="description" content="My Portfolio - Aldi Khoirul Abdillah" />
+    <link rel="stylesheet" href="build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Portfolio</title>
+  </head>
+  <body
+    class="font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300"
+  >
+    <!-- Dark mode background gradients -->
+    <div
+      class="fixed inset-0 -z-10 opacity-o dark:opacity-100 transition-opacity duration-500 pointer-events-none"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300"
+    >
+      <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span class="text-xl font-extrabold">Aldi Khoirul Abdillah</span>
+            <span class="text-primary text-2xl ml-1">.</span>
+          </div>
+          <ul class="hidden md:flex space-x-8">
+            <li>
+              <a
+                href="#features"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Showcase</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="flex items-center space-x-4">
+            <button id="themeToggle" class="">
+              <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
+            </button>
+            <button class="md:hidden p-2" id="menuToggle">
+              <div class="w-6 h-5 flex flex-col justify-between">
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+                <span
+                  class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white dark:bg-dark-background z-50 transform translate-x-full transition-transform duration-300 md:hidden"
+    >
+      <div class="container mx-auto px-4 h-full flex flex-col">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span class="text-xl font-extrabold">Aldi Khoirul Abdillah</span>
+            <span class="text-primary text-2xl ml-1">.</span>
+          </div>
+          <button id="closeMenu" class="p-2">
+            <i
+              class="fa-solid fa-circle-xmark text-gray-600 dark:text-gray-400 text-2xl"
+            ></i>
+          </button>
+        </div>
+        <ul class="flex-1 flex flex-col justify-center items-center space-y-8">
+          <li>
+            <a
+              href="#features"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Showcase</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Your Go-To
+            <span
+              class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+              >React Developer</span
+            >
+            For Stunning Web Experiences
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
+            I build
+            <strong>robust, scalable, and elegant web apps</strong> using modern
+            technologies and industry best practices.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="#projects"
+              class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10"
+            >
+              View Projects</a
+            >
+            <a
+              href="#about"
+              class="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-colors"
+              >Learn More</a
+            >
+          </div>
+          <div
+            id="terminal-container"
+            class="bg-gray-100 dark:bg-dark-background-secondary rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto"
+          >
+            <div
+              class="flex items-center space-x-2 p-3 bg-gray-200 dark:bg-dark-background"
+            >
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500"></span>
+            </div>
+            <div class="p-6 font-mono terminal-content">
+              <span class="text-green-500">echo</span>
+              <span class="command-text text-gray-900 dark:text-white"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section
+      id="features"
+      class="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          What's in my Toolkit
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
+          A collection of skills, tools, and best practices I use to build fast,
+          beautiful, and user-friendly web applications.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-paintbrush text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Modern UI Design</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              I design sleek, intuitive interfaces using Tailwind CSS and modern
+              design principles to ensure visual consistency and user delight.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-code text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Clean Code</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              I write well-structured, readable, and maintainable code —
+              following best practices to ensure scalability and ease of
+              collaboration.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-bolt text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Performance Optimization</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              I optimize performance through lazy loading, code splitting, and
+              efficient data handling to deliver blazing-fast web applications.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-mobile-alt text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Responsive Development</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              I build fully responsive layouts that adapt beautifully to all
+              devices — ensuring great user experiences on mobile, tablet, and
+              desktop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-24 translate-y-4 transition-all duration-500 opacity-0"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
+              I'm a frontend developer with a passion for creating user-friendly
+              and visually appealing web applications. With a strong focus on
+              clean, efficient code, I aim to deliver exceptional user
+              experiences that meet my clients' needs.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              I specialize in building modern, responsive web applications that
+              are fast, secure, and easy to use. I leverage the latest tools and
+              technologies to ensure my clients receive the best possible
+              experience.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mb-8">
+              When I'm not coding, you can find me exploring new technologies,
+              playing sports, or enjoying video games. I'm always eager to learn
+              and stay up-to-date with the latest trends in web development.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10 text-center"
+                >Contact Me</a
+              >
+              <a
+                href="../assets/documents/Frontend Developer - Aldi Khoirul Abdillah.pdf"
+                target="_blank"
+                class="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-colors text-center"
+                >Download CV & Portfolio</a
+              >
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="w-72 h-72 mx-auto animate-morph bg-gradient-to-br from-primary via-secondary to-accent rounded-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/50 via-secondary/50 to-accent/50 rounded-full blur-2xl animate-morph"
+              ></div>
+              <img
+                src="../assets/images/profil.JPG"
+                alt="Profile Picture"
+                class="absolute inset-0 w-full h-full object-cover z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          My Skills
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
+          The tools and tech I use daily to craft modern, high-performing
+          websites.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-html5 text-red-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">HTML5</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[95%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-css3 text-blue-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">CSS3</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-js text-yellow-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">JavaScript</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-php text-purple-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">PHP</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-laravel text-red-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Laravel</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[60%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-node-js text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Node.js</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[60%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-blue-400/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-react text-blue-400 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">ReactJS</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-gray-400/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/nextjs.png"
+                alt="NextJS"
+                class="text-gray-400 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">NextJS</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[60%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/tailwindcss.png"
+                alt="Tailwind"
+                class="text-sky-500 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">Tailwind CSS</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-indigo-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-bootstrap text-indigo-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Bootstrap</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-flask text-orange-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">API</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-git-alt text-orange-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Git</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/postman.png"
+                alt="Postman"
+                class="text-orange-500 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">Postman</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/vs-code.png"
+                alt="Postman"
+                class="text-sky-500 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">VsCode</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/vite.png"
+                alt="Vite"
+                class="text-purple-500 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">Vite</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-gray-400/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-brands fa-github text-gray-800 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Github</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <img
+                src="../assets/images/sourcetree.png"
+                alt="Vite"
+                class="text-blue-500 text-3xl"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">Sourcetree</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-dark-background p-8 rounded-lg">
+            <div
+              class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-desktop text-purple-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Responsive Design</h3>
+            <div
+              class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden"
+            >
+              <div
+                class="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-24 translate-y-4 transition-all duration-500 opacity-0"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          Featured Projects
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
+          Real-world projects where code meets creativity and performance.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/endangan.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4 gap-3">
+                <h3 class="text-xl font-bold">E-Ndangan</h3>
+                <span
+                  class="bg-yellow-400 text-yellow-900 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap"
+                >
+                  In Development
+                </span>
+              </div>
+
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-28">
+                E-Ndangan is a web-based platform that helps users design and
+                share stylish digital wedding invitations without the need for
+                physical prints.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >ReactJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed opacity-60 pointer-events-none"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                > -->
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/article.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Article Web</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-28">
+                Article Web is a test project developed for a job application.
+                It allows users to create, edit, and delete articles with
+                token-based authentication.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >NextJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Zod</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://home-test-frontend-web-developer-taupe.vercel.app/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/sims.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Management Sims Ppob</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-28">
+                Sims Ppob is a web app built as part of a job test, focusing on
+                digital transactions like top-ups and bill payments. It’s
+                designed with a simple interface to make online payments easy
+                for users.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >ReactJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Redux</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://sims-ppob-aldi-khoirul-abdillah.vercel.app/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/movie.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Cinema Pocket21</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                Cinema Pocket 21 is a web-based streaming platform for movies,
+                series, and documentaries, inspired by Netflix and WeTV.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >ReactJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Redux</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JWT</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed opacity-60 pointer-events-none"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/sirem.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Sirem</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                Sirem is a web app for HR teams to manage payroll, benefits, and
+                reports with better structure and transparency.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >ReactJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JWT</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed opacity-60 pointer-events-none"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/rentcar.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Ya Rent Car</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                Ya Rent Car is a web app that helps users book and rent cars
+                online easily. Customers can find and book cars, and managers
+                can handle the fleet and schedules.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >ReactJS</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Gatsby</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://www.yarentcar.com/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/weather.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Weather App</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                Weather App is a simple web application that shows current
+                weather conditions and forecasts. Users can search for any city
+                to get up-to-date weather information easily.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >HTML5</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >CSS3</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >API</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://aldikhoirul.github.io/weatherApp/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/bmi.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">BMI Calculator App</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                BMI Calculator App is a simple tool that helps users calculate
+                their Body Mass Index based on their height and weight, giving
+                quick health insights.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >HTML5</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >CSS3</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Bootstrap</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://aldikhoirul.github.io/kalkulator-Bmi/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="h-48 relative">
+              <img
+                src="../assets/images/konversi.png"
+                alt="Endangan"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-4">Number Conversion App</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4 h-24">
+                Number Conversion App is a simple tool that helps users convert
+                numbers between different formats like decimal, binary, and
+                hexadecimal quickly and easily.
+              </p>
+              <div class="flex flex-wrap gap-2 my-6">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >HTML5</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >CSS3</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm"
+                  >Bootstrap</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="https://aldikhoirul.github.io/konversi-bilangan/"
+                  target="_blank"
+                  class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >Visit Site</a
+                >
+                <!-- <a
+                  href="#"
+                  class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  <i class="fa-brands fa-github mr-2"></i>Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 translate-y-4 transition-all duration-500 opacity-0"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          Get In Touch
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
+          Looking for a reliable frontend developer? I'm available for
+          freelance, remote, or collaborative projects.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div
+            class="lg:col-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6"
+          >
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-envelope text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Email</h3>
+              <p class="text-gray-600 dark:text-gray-400">aldikh@gmail.com</p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-location-dot text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Location</h3>
+              <p class="text-gray-600 dark:text-gray-400">Yogyakarta</p>
+            </div>
+            <div
+              class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-globe text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Sosial</h3>
+              <div class="flex justify-center space-x-4">
+                <a
+                  href="https://github.com/aldikhoirul"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/aldi-khoirul-abdillah-471851178/"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/aldikhrl_/"
+                  class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <form
+              action="https://script.google.com/macros/s/AKfycbxVXvJvAD2Lffl8pTtLmhJFKMDbNHmE7jMX_58XXX6V_GPRPWAV8kbXGLeMeK_NxT00zw/exec"
+              id="contactForm"
+              class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+              method="POST"
+            >
+              <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+              <div class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    name="nama"
+                    id="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    type="text"
+                    name="pesan"
+                    id="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10"
+                >
+                  Kirim
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-dark-background-secondary py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="flex items-center mb-4 md:mb-0">
+            <span class="text-xl font-extrabold">Aldi Khoirul Abdillah</span>
+            <span class="text-primary text-2xl ml-1">.</span>
+          </div>
+          <ul class="flex flex-wrap justify-center gap-6 mb-0">
+            <li>
+              <a
+                href="#features"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Showcase</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
+          <p>&copy; 2025 Aldi Khoirul Abdillah. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Handle contact form -->
+    <script>
+      const contactForm = document.getElementById("contactForm");
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const button = contactForm.querySelector("button[type='submit']");
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        const formData = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              swal("Terimakasih!", "Pesan anda sudah saya terima", "success");
+              contactForm.reset();
+            } else {
+              swal("Oops!", "Terjadi kesalahan, coba lagi nanti.", "error");
+            }
+          })
+          .catch(() => {
+            swal("Oops!", "Terjadi kesalahan, coba lagi nanti.", "error");
+          })
+          .finally(() => {
+            button.disabled = false;
+            button.textContent = "Kirim";
+          });
+      });
+    </script>
+
+    <!-- Sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>
