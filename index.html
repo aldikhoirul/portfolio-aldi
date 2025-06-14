@@ -1284,7 +1284,7 @@
                   type="submit"
                   class="w-full px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10"
                 >
-                  Kirim
+                  Send Message
                 </button>
               </div>
             </form>
@@ -1384,14 +1384,18 @@
         })
           .then((response) => {
             if (response.ok) {
-              swal("Terimakasih!", "Pesan anda sudah saya terima", "success");
+              swal("Thanks!", "I’ve received your message.", "success");
               contactForm.reset();
             } else {
               swal("Oops!", "Terjadi kesalahan, coba lagi nanti.", "error");
             }
           })
           .catch(() => {
-            swal("Oops!", "Terjadi kesalahan, coba lagi nanti.", "error");
+            swal(
+              "Oops!",
+              "Something went wrong, please try again later.",
+              "error"
+            );
           })
           .finally(() => {
             button.disabled = false;
