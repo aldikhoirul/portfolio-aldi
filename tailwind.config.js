@@ -39,7 +39,7 @@ module.exports = {
           "100%": { borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%" },
         },
         pulse: {
-          "0%, 100%": { tramsform: "scale(1)" },
+          "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.05)" },
         },
       },

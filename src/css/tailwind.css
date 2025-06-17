@@ -69,6 +69,42 @@
   animation: blink 1s step-end infinite;
 }
 
+/* Gradient Text Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-to-gradient {
+  0% {
+    color: rgb(0 0 0);
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+.gradient-text-delayed {
+  color: #000;
+  background: linear-gradient(
+    90deg,
+    theme("colors.primary"),
+    theme("colors.secondary"),
+    theme("colors.accent"),
+    theme("colors.secondary"),
+    theme("colors.primary")
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fade-to-gradient 2s ease-out forwards,
+    gradient-flow 3s linear 1s infinite;
+}
+
 /* Add initial opacity and transform for fade-in animations */
 .opacity-0 {
   opacity: 0;
