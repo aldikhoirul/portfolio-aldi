@@ -1293,10 +1293,10 @@ video {
 /* Gradient Text Animation */
 @keyframes gradient-flow {
   0% {
-    background-position: 100% 50%;
+    background-position: 0% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
 
@@ -1322,8 +1322,8 @@ video {
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: fade-to-gradient 2s ease-out forwards,
-    gradient-flow 3s linear 1s infinite;
+  animation: fade-to-gradient 4s ease-out forwards,
+    gradient-flow 4s ease-in-out 4s infinite alternate;
 }
 
 /* Add initial opacity and transform for fade-in animations */
